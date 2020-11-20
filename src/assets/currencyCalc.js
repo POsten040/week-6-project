@@ -1,9 +1,10 @@
 export default function currecyCalc (response, userInput){
   let rates = response.conversion_rates;
-  let x = [];
+  let obj = {code:[], dol:[]};
   for (let [key, value] of Object.entries(rates)) {
     let val = `${value}` * userInput;
-    x.push("<br>" + `${key}:` + val + "</br>");
+    obj.code.push(`${key}:`);
+    obj.dol.push(val);
   }
-  return x;
+  return obj;
 }

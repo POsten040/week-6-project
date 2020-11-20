@@ -9,7 +9,6 @@ $("document").ready(function(){
   $("#userInput").submit(function(event) {
     event.preventDefault();
     let userUSD = parseInt($("#currency").val());
-    console.log(userUSD);
     getRates(userUSD);
     });
   });
@@ -22,8 +21,13 @@ async function getRates(userInput) {
 function getElements(response, userInput) {
   if (response) {
     let convertedMoney = currencyCalc(response, userInput);
-    console.log(convertedMoney);
-    $(".result").text(`${convertedMoney}`);
+    convertedMoney.code.forEach(el => {
+      $("#coun").html("<td>" + `${el}` + "</td>");
+    });
+    convertedMoney.dol.forEach(el => {
+      $("#dol").html("<td>" + `${el}` + "</td>");
+      console.log(`${el}`);
+    });
   } else {
     $("#errors").text(`There seems to be an issue with the request: ${response.message}`);
   }
