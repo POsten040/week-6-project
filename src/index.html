@@ -10,22 +10,27 @@
         <input type="number" id="currency" required placeholder="Enter Dollar Ammount Here">
         </label>
         <button type="submit" class="btn btn-success">See Exchange Rate</button>
+        <label for="country">
+        <input type="text" class="form-control" id="country" style="text-transform:uppercase" placeholder="enter Country Code" required>
+        </label>
       </div>
-      <table class="table table-dark table-striped">
+    </form>
+      <br>
+      <table style="width:20%" class="table table-dark table-striped">
         <thead>
           <tr>
-            <th scope="col">Country by Code</th>
-            <th scope="col">Dollars in Local Currency</th>
+            <th>Country by Code</th>
+            <th>Dollars in Local Currency</th>
           </tr>
         </thead>
         <tbody>
-          <tr scope="col">
-            <th>
+          <tr >
+            <td>
             <span id="coun"></span>
-            <th>
-            <span id="dol"></span>
-          </tr>
-          <tr scope="col">
+            </td>
+            <td>
+              <span id="dol"></span>
+            </td>
           </tr>
         </tbody>
       </table>

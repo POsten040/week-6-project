@@ -9,20 +9,25 @@ $("document").ready(function(){
   $("#userInput").submit(function(event) {
     event.preventDefault();
     let userUSD = parseInt($("#currency").val());
-    getRates(userUSD);
+    let code = $("#country").val();
+    getRates(userUSD, code);
     });
   });
 
-async function getRates(userInput) {
+async function getRates(userInput, code) {
   const response = await exchangeApi.getExchange();
-  getElements(response, userInput);
+  getElements(response, userInput, code);
 }
 
-function getElements(response, userInput) {
+function getElements(response, userInput, code) {
   if (response) {
-    let convertedMoney = currencyCalc(response, userInput);
-    $("#coun").html("<tr>" + convertedMoney.coun + "</tr>");
-    $("#dol").html(convertedMoney.dol);
+    let convertedMoney = currencyCalc(response, userInput, code);
+    if (convertedMoney.coun.includes(code)) {
+      $("#coun").html(`${convertedMoney.coun}`);
+      $("#dol").html(`${convertedMoney.dol}`);
+    } else {
+      $("#errors").html(`ExchangeRate API does not support country code ${code}`)
+    }
   } else {
     $("#errors").text(`There seems to be an issue with the request: ${response.message}`);
   }
