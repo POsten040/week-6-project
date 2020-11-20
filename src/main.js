@@ -10,17 +10,22 @@ $("document").ready(function(){
     event.preventDefault();
     let userUSD = parseInt($("#currency").val());
     console.log(userUSD);
-    let body = exchangeApi.getExchange();
-    body.then(function(response) {
-      console.log(response);
-      currencyCalc(response, userUSD);
-      getElements(response);
-    })
+    getRates(userUSD);
+    });
   });
-});
-function getElements(response) {
+
+async function getRates(userInput) {
+  const response = await exchangeApi.getExchange();
+  getElements(response, userInput);
+}
+
+function getElements(response, userInput) {
   if (response) {
-    $(".result").text(response)
+    let convertedMoney = currencyCalc(response, userInput);
+    console.log(convertedMoney);
+    $(".result").text(`${convertedMoney}`);
+  } else {
+    $("#errors").text(`There seems to be an issue with the request: ${response.message}`);
   }
 }
 
