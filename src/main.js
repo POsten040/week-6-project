@@ -21,13 +21,8 @@ async function getRates(userInput) {
 function getElements(response, userInput) {
   if (response) {
     let convertedMoney = currencyCalc(response, userInput);
-    convertedMoney.code.forEach(el => {
-      $("#coun").html("<td>" + `${el}` + "</td>");
-    });
-    convertedMoney.dol.forEach(el => {
-      $("#dol").html("<td>" + `${el}` + "</td>");
-      console.log(`${el}`);
-    });
+    $("#coun").html("<tr>" + convertedMoney.coun + "</tr>");
+    $("#dol").html(convertedMoney.dol);
   } else {
     $("#errors").text(`There seems to be an issue with the request: ${response.message}`);
   }
