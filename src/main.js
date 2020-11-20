@@ -17,24 +17,29 @@ $("document").ready(function(){
 
 async function getRates(userInput, code) {
   const response = await exchangeApi.getExchange();
-  getElements(response, userInput, code);
-}
-
-function getElements(response, userInput, code) {
-  if (response) {
-    let convertedMoney = currencyCalc(response, userInput, code);
-    if (convertedMoney.coun.indexOf(code + ":") != -1) {
-      let i = convertedMoney.coun.indexOf(code + ":");
-      $("#coun").html(`${convertedMoney.coun[i]}`);
-      $("#dol").html(`${convertedMoney.dol[i]}`);
-    } else {
-      $("#errors").html(`ExchangeRate API does not support country code ${code}`)
-    }
+  console.log(response);
+  if (!response.result) {
+    $("#errors").html("There was a problem processing the request")
   } else {
-    $("#errors").text(`There seems to be an issue with the request: ${response.message}`);
+    getElements(response, userInput, code);
   }
 }
 
-// function clearField() {
+function getElements(response, userInput, code) {
+  clearField();
+  let convertedMoney = currencyCalc(response, userInput, code);
+  if (convertedMoney.coun.indexOf(code + ":") != -1) {
+    let i = convertedMoney.coun.indexOf(code + ":");
+    $("#coun").html(`${convertedMoney.coun[i]}`);
+    $("#dol").html(`${convertedMoney.dol[i]}`);
+  } else {
+    $("#errors").html(`ExchangeRate API does not support country code ${code}`)
+  }
+}
 
-// }
+function clearField() {
+  $("#coun").html("");
+  $("#dol").html("");
+  $("#errors").html("");
+
+}
