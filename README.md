@@ -45,31 +45,6 @@
     <td>Should parse currency info from the response and return dollar ammounts for different countries</td>
     <td>$10</td>
     <td>100 pesos, 100 rupees, e.c.t</td>
-  <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-  <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-  <tr>
-    <td></td>
-    <td></td>
-    <td></td>
- <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-  <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-  <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-  <tr>
 </table>
 
 ## Contact 
