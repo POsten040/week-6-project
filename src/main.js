@@ -10,7 +10,6 @@ $("document").ready(function(){
     event.preventDefault();
     let userUSD = parseInt($("#currency").val());
     let code = $("#country").val().toUpperCase();
-
     getRates(userUSD, code);
     });
   });
@@ -40,5 +39,4 @@ function clearField() {
   $("#coun").html("");
   $("#dol").html("");
   $("#errors").html("");
-
 }
