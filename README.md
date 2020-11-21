@@ -1,12 +1,13 @@
 # Currency Exchange API 
 
-#### **This program lets users see exchange rates for currency. Patrick Osten, 10/23/2020**
+#### **This program lets users see exchange rates for currency. Patrick Osten, 11/20/2020**
 
 **[Click here to open github repository in web browser](https://github.com/POsten040/week-5-project)**
 
 ## Description
 
-Money comes in all colors and creeds, but how much of it exactly do you have? Enter an ammount of dollars to see the exchange rate for different countries. This program uses the [ExchangeRate API](https://www.exchangerate-api.com/docs/overview).
+* Money comes in all colors and creeds, but how much of it exactly do you have? Enter an ammount of dollars to see the exchange rate for different countries. This program uses the [ExchangeRate API](https://www.exchangerate-api.com/docs/overview).
+* Error messages will appear if the API call is faulty, or if the user input is faulty.
 
 ## Installation Requirements
 
@@ -22,11 +23,11 @@ Money comes in all colors and creeds, but how much of it exactly do you have? En
 1. Open GitBash/Bash, type 
 : `git clone {https://github.com/POsten040/week-5-project}`
 2. Visit [ExchangeRate](https://www.exchangerate-api.com/) to get an API key, there is a free and paid version.
-3. Create an .env file and save the API key in it like so: `API_KEY = {your key goes here without braces}`
+3. Create an .env file in the root drectory of the project and save the API key in it like so: `API_KEY = {your key goes here without braces}`
 4. From the root directory you can then type `npm run start` to launch the project in the browser.
 
 ## Specs
-### Describe AgeCalculator
+
 <table>
   <tr>
     <th>Test</th>

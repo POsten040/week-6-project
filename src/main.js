@@ -17,7 +17,6 @@ $("document").ready(function(){
 
 async function getRates(userInput, code) {
   const response = await exchangeApi.getExchange();
-  console.log(response);
   if (!response.result) {
     $("#errors").html("There was a problem processing the request")
   } else {
@@ -33,7 +32,7 @@ function getElements(response, userInput, code) {
     $("#coun").html(`${convertedMoney.coun[i]}`);
     $("#dol").html(`${convertedMoney.dol[i]}`);
   } else {
-    $("#errors").html(`ExchangeRate API does not support country code ${code}`)
+    alert(`ExchangeRate API does not support country code ${code}`)
   }
 }
 
