@@ -2,7 +2,7 @@
 
 #### **This program lets users see exchange rates for currency. Patrick Osten, 11/20/2020**
 
-**[Click here to open github repository in web browser](https://github.com/POsten040/week-5-project)**
+**[Click here to open github repository in web browser](https://github.com/POsten040/week-6-project)**
 
 ## Description
 
@@ -19,7 +19,7 @@
 - Code editor like [VsCode](https://**Code**.visualstudio.com/download) to view source **Code**.
 
 **Option 1** (download zip file)
-1) Copy and paste the following GitHub project link into your web browser's url bar and hit enter/return. https://github.com/RMGit-it/code_typing_game
+1) Copy and paste the following GitHub project link into your web browser's url bar and hit enter/return. https://github.com/POsten040/week-6-project
 2) Click the green "Code" button near the upper right corner of the screen.
 3) Select "Download Zip" from the dropdown menu that appears upon "Code" button click.
 4) From within your Downloads folder (or bar along the bottom of your browser), right click the .zip file and extract(unzip) its contents.
@@ -35,7 +35,7 @@
 1) Open your Git enabled terminal/console and navigate to a directory that you wish to download this project to.
 2) Type the following line of code into your terminal/console to automatically download the project to your current direcory and hit return/enter
 
-    <code>git clone https://github.com/RMGit-it/code_typing_game</code><br>
+    <code>git clone https://github.com/POsten040/week-6-project</code><br>
 
 3) To take a look at this repository's files, navigate to the root directory of the project in the terminal/console, and type
 
