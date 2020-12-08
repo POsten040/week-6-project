@@ -15,40 +15,19 @@
  
 - [Node.js](https://nodejs.org/en/download/)
  
- -**optional**- 
 - Code editor like [VsCode](https://**Code**.visualstudio.com/download) to view source **Code**.
 
-**Option 1** (download zip file)
-1) Copy and paste the following GitHub project link into your web browser's url bar and hit enter/return. https://github.com/POsten040/week-6-project
-2) Click the green "Code" button near the upper right corner of the screen.
-3) Select "Download Zip" from the dropdown menu that appears upon "Code" button click.
-4) From within your Downloads folder (or bar along the bottom of your browser), right click the .zip file and extract(unzip) its contents.
-5) Open the unzipped folder/files using Visual Studio Code or similar source code editing program.
-6) Install all required dependencies from the package.JSON folder, and then build the program.  To do this using Node Package Manager (npm), first navigate to the root directory of the project in your console.  You can then type the following commands to install and build the program.
+## Setup
 
-    <code>npm install</code>
+* Download the zip file from this [GitHub Repo Page](https://github.com/POsten040/week-6-project)  
+--or--
+* From your terminal type 
+: `git clone {https://github.com/POsten040/week-6-project}`
+2. To get an ExchangeRate API key follow [ExchangeRate-API](https://www.exchangerate-api.com/) and use the 'Get Free Key' Option.
+3. In the root directory create a .env file and save the API key in this format `API_KEY = your key goes here`
+4. From the root directory of the project run this in the terminal : `npm i`
+5. To open in your browser run : `npm start`
 
-    <code>npm run build</code>
-
-7) Once the code is built, a "dist/" directory will be created in the root directory of the project.  Launch the "index.html" file found here and it should open with your default web browser.
-**Option 2** (via git console/terminal)
-1) Open your Git enabled terminal/console and navigate to a directory that you wish to download this project to.
-2) Type the following line of code into your terminal/console to automatically download the project to your current direcory and hit return/enter
-
-    <code>git clone https://github.com/POsten040/week-6-project</code><br>
-
-3) To take a look at this repository's files, navigate to the root directory of the project in the terminal/console, and type
-
-    <code>code .</code> and then hit return/enter.
-
-_The project should automatically launch using your default code editor._
-4) Using the two terminal commands shown just below, npm will install all required dependencies from the package.JSON folder, and build the program. To use these npm commands, make sure your present working directory is the root folder of the project in your console. Here are the commands to install and build the program:
-
-    <code>npm install</code>
-
-    <code>npm run build</code>
-
-5) Once the code is built, a "dist/" directory will be created in the root directory of the project.  Launch the "index.html" file found here, and it will open in your default web browser.
 
 ## Specs
 
